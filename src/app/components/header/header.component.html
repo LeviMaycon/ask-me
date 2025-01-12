@@ -1,3 +1,54 @@
-<h1 class="text-4xl font-bold text-blue-500">
-  TailwindCSS configurado com sucesso!
-</h1>
+<header class="bg-gray-800 text-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <button class="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 12a5 5 0 110-10 5 5 0 010 10z" />
+        </svg>
+      </button>
+    </div>
+    <a href="/" class="flex-1 text-3xl pl-40 justify-center items-center font-bold text-red-600 text-center">
+      AskMe
+    </a>
+    <div class="flex space-x-4">
+      <a
+        href="/register"
+        class="bg-gray-700 text-white font-medium px-6 py-3 rounded-lg hover:bg-gray-600 transition"
+      >
+        Registrar
+      </a>
+      <a
+        href="/login"
+        class="bg-red-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-red-700 transition"
+      >
+        Entrar
+      </a>
+    </div>
+    <button
+      class="md:hidden text-white hover:text-gray-200 transition focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  <div class="bg-gray-800 py-4">
+    <nav class="max-w-7xl mx-auto px-4 flex justify-center space-x-8">
+      <a href="/" class="hover:text-red-500 transition">Home</a>
+      <a href="/world" class="hover:text-red-500 transition">Mundo</a>
+      <a href="/business" class="hover:text-red-500 transition">Negócios</a>
+      <a href="/technology" class="hover:text-red-500 transition">Tecnologia</a>
+      <a href="/entertainment" class="hover:text-red-500 transition">Entretenimento</a>
+    </nav>
+  </div>
+  <div *ngIf="menuOpen" class="md:hidden bg-gray-800">
+    <nav class="flex flex-col space-y-4 px-4 py-4">
+      <a href="/" class="hover:text-red-500 transition">Home</a>
+      <a href="/world" class="hover:text-red-500 transition">Mundo</a>
+      <a href="/business" class="hover:text-red-500 transition">Negócios</a>
+      <a href="/technology" class="hover:text-red-500 transition">Tecnologia</a>
+      <a href="/entertainment" class="hover:text-red-500 transition">Entretenimento</a>
+    </nav>
+  </div>
+</header>
